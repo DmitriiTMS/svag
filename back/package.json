@@ -1,5 +1,5 @@
 {
-  "name": "back",
+  "name": "@svag/back",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,6 +8,8 @@
     "start": "node ./dist/index.js"
   },
   "dependencies": {
+    "@trpc/server": "^10.37.1",
+    "cors": "^2.8.5",
     "express": "^4.21.2"
   },
   "devDependencies": {
@@ -16,6 +18,7 @@
     "rimraf": "^5.0.10",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "@types/cors": "^2.8.17"
   }
 }
