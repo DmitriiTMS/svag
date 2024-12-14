@@ -3,15 +3,17 @@ import { TrpcProvider } from './lib/trpc';
 import { AllIdeasPage } from './pages/AllIdeasPage';
 import { OneIdea } from './pages/OneIdea';
 import { getAllIdeasRoute, getOneIdea } from './lib/routes';
+import { Layout } from './components/Layout';
 
 export const App = () => {
-
   return (
     <TrpcProvider>
       <BrowserRouter>
         <Routes>
-          <Route path={getAllIdeasRoute()} element={<AllIdeasPage />} />
-          <Route path={getOneIdea({id: ':id'})} element={<OneIdea />} />
+          <Route element={<Layout />}>
+            <Route path={getAllIdeasRoute()} element={<AllIdeasPage />} />
+            <Route path={getOneIdea({ id: ':id' })} element={<OneIdea />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </TrpcProvider>
